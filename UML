@@ -1,0 +1,17 @@
+@startuml
+class GroupingSymbolChecker {
+    - filename: String
+    - checkGroupingSymbols(filename: String): boolean
+    - isGroupingSymbol(c: char): boolean
+    - isOpenSymbol(c: char): boolean
+    - isMatchingPair(open: char, close: char): boolean
+    + main(args: String[]): void
+}
+
+note right of GroupingSymbolChecker
+    This class is responsible for checking the correctness of grouping symbols
+    (parentheses, braces, and brackets) in a Java source code file.
+    It implements a stack-based algorithm to validate the pairs of grouping symbols.
+end note
+
+@enduml
